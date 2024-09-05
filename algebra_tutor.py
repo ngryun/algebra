@@ -8,9 +8,7 @@ from datetime import datetime
 import pytz
 # 한국 표준시 (KST) 타임존 가져오기
 kst = pytz.timezone('Asia/Seoul')
-names = st.secrets["names"]
 
-# API_KEY = os.environ['OPENAI_API_KEY']
 API_KEY = st.secrets["OpenAI_key"]
 client = OpenAI(api_key=API_KEY)
 #thread id 를 하나로 관리하기 위함
