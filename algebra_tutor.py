@@ -18,13 +18,13 @@ if 'key' not in st.session_state:
 
 print(st.session_state.key)
 thread_id = st.session_state.key
-assistant_id = 'asst_kX5BLago4lKTZS19W5K3rXco'
+assistant_id = 'asst_FySMLOEwlZUKP3EPP7zYp2wy'
 my_assistant = client.beta.assistants.retrieve(assistant_id)
 thread_messages = client.beta.threads.messages.list(thread_id,order="asc")
 
-st.header('수학 질문 챗봇 TEST ver')
-st.caption("대수적 사고를 발전시키기 위함")
-msg = "수식을 입력할 때 제곱(^) 곱하기(*) 나누기(/) 등의 연산명령어를 이용하면 됩니다. 😊✨"
+st.header('다독임_남궁연')
+st.caption("남궁연 대신 다독임 모임에 참여한 저의 분신입니다. 남궁연의 사고와 철학에 기반하여 대답합니다.")
+msg = "안녕하세요? 선생님 😊✨"
 with st.chat_message("assistant", avatar="seoli.png"):
     st.markdown(msg)
 
@@ -39,7 +39,7 @@ for msg in thread_messages.data:
         with st.chat_message(msg.role):
             st.markdown(msg.content[0].text.value)
 
-prompt = st.chat_input("질문하고 싶은 것을 입력해봐!")
+prompt = st.chat_input("질문해보세요")
 
 if prompt:
   st.chat_message("user").write(prompt)
