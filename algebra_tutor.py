@@ -16,15 +16,14 @@ if 'key' not in st.session_state:
     thread = client.beta.threads.create()
     st.session_state.key = thread.id
 
-print(st.session_state.key)
 thread_id = st.session_state.key
-assistant_id = 'asst_FySMLOEwlZUKP3EPP7zYp2wy'
+assistant_id = 'asst_kX5BLago4lKTZS19W5K3rXco'
 my_assistant = client.beta.assistants.retrieve(assistant_id)
 thread_messages = client.beta.threads.messages.list(thread_id,order="asc")
 
-st.header('다독임_남궁연')
-st.caption("남궁연 대신 다독임 모임에 참여한 저의 분신입니다. 남궁연의 사고와 철학에 기반하여 대답합니다.")
-msg = "안녕하세요? 선생님 😊✨"
+st.header('궁바타')
+st.caption("설악고등학교 남궁연 선생님의 분신입니다. 수학에 대해 질문하세요")
+msg = "안녕하세요? 😊✨"
 with st.chat_message("assistant", avatar="seoli.png"):
     st.markdown(msg)
 
