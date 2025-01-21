@@ -17,12 +17,12 @@ if 'key' not in st.session_state:
     st.session_state.key = thread.id
 
 thread_id = st.session_state.key
-assistant_id = 'asst_kX5BLago4lKTZS19W5K3rXco'
+assistant_id = 'asst_q8c5crZIHLcWVMa59AH2QR4M'
 my_assistant = client.beta.assistants.retrieve(assistant_id)
 thread_messages = client.beta.threads.messages.list(thread_id,order="asc")
 
 st.header('궁피티')
-st.caption("설악고등학교 남궁연 선생님의 분신입니다. 수학에 대해 질문하세요.")
+st.caption("설악고등학교 남궁연의 분신입니다. 연구방법에 대해 질문하세요.")
 msg = "안녕하세요? 😊✨"
 with st.chat_message("assistant", avatar="seoli.png"):
     st.markdown(msg)
