@@ -22,7 +22,7 @@ my_assistant = client.beta.assistants.retrieve(assistant_id)
 thread_messages = client.beta.threads.messages.list(thread_id,order="asc")
 
 st.header('궁피티')
-st.caption("설악고등학교 남궁연의 분신입니다. 연구방법에 대해 질문하세요.")
+st.caption("anderson 의 분신입니다. 채점기준안 작성을 도울수 있습니다")
 msg = "안녕하세요? 😊✨"
 with st.chat_message("assistant", avatar="seoli.png"):
     st.markdown(msg)
