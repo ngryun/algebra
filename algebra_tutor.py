@@ -21,8 +21,8 @@ assistant_id = 'asst_q8c5crZIHLcWVMa59AH2QR4M'
 my_assistant = client.beta.assistants.retrieve(assistant_id)
 thread_messages = client.beta.threads.messages.list(thread_id,order="asc")
 
-st.header('궁피티')
-st.caption("anderson 의 분신입니다. 채점기준안 작성을 도울수 있습니다")
+st.header('✨궁피티✨')
+st.caption("설악고등학교 선생님들을 위한 인공지능입니다.")
 msg = "안녕하세요? 😊✨"
 with st.chat_message("assistant", avatar="seoli.png"):
     st.markdown(msg)
