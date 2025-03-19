@@ -24,7 +24,7 @@ thread_messages = client.beta.threads.messages.list(thread_id,order="asc")
 st.header('✨궁피티✨')
 st.caption("설악고등학교 선생님들을 위한 인공지능입니다.")
 msg = "안녕하세요? 😊✨"
-with st.chat_message("assistant", avatar="seoli.png"):
+with st.chat_message("assistant", avatar="wona.png"):
     st.markdown(msg)
 
 if "text_boxes" not in st.session_state:
@@ -32,7 +32,7 @@ if "text_boxes" not in st.session_state:
 
 for msg in thread_messages.data:
     if msg.role == 'assistant':
-        with st.chat_message(msg.role, avatar="seoli.png"):
+        with st.chat_message(msg.role, avatar="wona.png"):
             st.write(msg.content[0].text.value)
     else:
         with st.chat_message(msg.role):
